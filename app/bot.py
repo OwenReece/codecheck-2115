@@ -20,7 +20,7 @@ class Bot(object):
 
     tmp_res1 = dat.split("e+")
 
-    if (int(tmp_result1[1]) > 21):
+    if (int(tmp_res1[1]) > 21):
       tmp_res2 = "".join(str(t) for t in tmp_res1)
       tmp_res3 = tmp_res2.split(".")
       result = tmp_res3[1]
