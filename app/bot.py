@@ -18,17 +18,17 @@ class Bot(object):
   # If power of e is greater than 20, get the number between "." and "e"
   # Else return the number itself
 
-  def scientificNotation(num):
-    dat = "%.16e" % num
+def scientificNotation(num):
+  dat = "%.16e" % num
 
-    tmp_res1 = dat.split("e+")
+  tmp_res1 = dat.split("e+")
 
-    if (tmp_res1[1] > 21):
-      tmp_res2 = "".join(str(t) for t in tmp_res1)
-      tmp_res3 = tmp_res2.split(".")
-      while(tmp_res3[1][0]=="0"):
-        result = tmp_res3[1].lstrip("0")
-      return result
-    else:
-      result = num
-      return result
+  if (tmp_res1[1] > 21):
+    tmp_res2 = "".join(str(t) for t in tmp_res1)
+    tmp_res3 = tmp_res2.split(".")
+    while(tmp_res3[1][0]=="0"):
+      result = tmp_res3[1].lstrip("0")
+    return result
+  else:
+    result = num
+    return result
