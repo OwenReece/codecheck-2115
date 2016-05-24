@@ -3,7 +3,7 @@
 class Bot:
   #ここに素数判定プログラムを実装してください。
 
-  def generateHash(self,command,data,hash):
+  def generate_hash(self,command,data,hash):
     temp_list_com=[ord(t) for t in len(self["command"])]
     self.command = "".join(str(d) for d in temp_list_com)
     temp_list_dat=[ord(t) for t in len(self["data"])]
