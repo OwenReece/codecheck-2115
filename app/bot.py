@@ -3,9 +3,8 @@
 from nose.tools import assert_equal
 
 class Bot(object):
-  def __init__(self,command,data):
-    self.command = command
-    self.data = data
+  def __init__(self,dic={}):
+    self.dic = dic
   def generate_hash(self,command,data):
     temp_list_com=[ord(t) for t in len(self["command"])]
     self.command = "".join(str(d) for d in temp_list_com)
