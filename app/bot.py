@@ -11,7 +11,7 @@ class Bot(object):
     temp_list_dat=[ord(t) for t in self.dic["data"]]
     self.data = "".join(str(d) for d in temp_list_dat)
 
-    self.hash=hex(scientificNotation(int(self.data))+scientificNotation(int(self.command))
+    self.hash=hex(scientificNotation(int(self.data))+scientificNotation(int(self.command)))
     return self.hash
 
   # Convert the number into scientific notation with 16 digits after "."
