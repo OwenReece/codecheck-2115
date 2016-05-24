@@ -22,7 +22,7 @@ class Bot(object):
 def scientificNotation(num):
   dat = "%.16e" % num
   tmp_res1 = dat.split("e+")
-  if (tmp_res1[1] > 21):
+  if (int(tmp_res1[1]) > 21):
     tmp_res2 = "".join(str(t) for t in tmp_res1)
     tmp_res3 = tmp_res2.split(".")
     while(tmp_res3[1][0]=="0"):
