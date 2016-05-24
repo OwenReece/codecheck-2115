@@ -6,9 +6,9 @@ class Bot(object):
   def __init__(self,dic={}):
     self.dic = dic
   def generate_hash(self):
-    temp_list_com=[ord(t) for t in len(self["command"])]
+    temp_list_com=[ord(t) for t in len(self.dic["command"])]
     self.command = "".join(str(d) for d in temp_list_com)
-    temp_list_dat=[ord(t) for t in len(self["data"])]
+    temp_list_dat=[ord(t) for t in len(self.dic["data"])]
     self.data = "".join(str(d) for d in temp_list_dat)
 
     self.hash=hex(scientificNotation(ans_com)+scientificNotation(ans_dat))
