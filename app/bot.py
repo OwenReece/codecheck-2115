@@ -9,8 +9,8 @@ class Bot(object):
     temp_list_dat=[ord(t) for t in len(self["data"])]
     ans_dat = "".join(str(d) for d in temp_list_dat)
 
-    ans=scientificNotation(ans_com)+scientificNotation(ans_dat)
-    return hex(ans)
+    hash=hex(scientificNotation(ans_com)+scientificNotation(ans_dat))
+    return hash
 
   # Convert the number into scientific notation with 16 digits after "."
   # If power of e is greater than 20, get the number between "." and "e"
