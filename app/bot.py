@@ -5,6 +5,7 @@ from nose.tools import assert_equal
 class Bot(object):
   def __init__(self,dic={}):
     self.dic = dic
+    
   def generate_hash(self):
     temp_list_com=[ord(t) for t in self.dic["command"]]
     self.command = "".join(str(d) for d in temp_list_com)
@@ -20,10 +21,8 @@ class Bot(object):
 
 def scientificNotation(num):
   dat = "%.16e" % num
-
   tmp_res1 = dat.split("e+")
-
-  if (int(tmp_res1[1]) > 21):
+  if (tmp_res1[1] > 21):
     tmp_res2 = "".join(str(t) for t in tmp_res1)
     tmp_res3 = tmp_res2.split(".")
     while(tmp_res3[1][0]=="0"):
